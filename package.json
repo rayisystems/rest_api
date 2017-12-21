@@ -1,0 +1,44 @@
+{
+  "name": "boatpal_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon -w src --exec \"babel-node src --presets env,stage-2\"",
+    "build": "babel src -s -D -d dist --presets env,stage-2",
+    "start": "NODE_ENV=production pm2 start dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.13.1",
+    "nodemon": "^1.14.1"
+  }
+}

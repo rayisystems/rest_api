@@ -1,23 +1,14 @@
 import mongoose from 'mongoose';
-import {
-    Router
-} from 'express';
+import {  Router } from 'express';
 import bodyParser from 'body-parser';
 import passport from 'passport';
 
 import config from '../config';
 import Account from '../model/account';
 
-import {
-    generateAccessToken,
-    respond,
-    authenticate
-} from '../middleware/authMiddleware';
+import { generateAccessToken, respond, authenticate } from '../middleware/authMiddleware';
 
-export default ({
-    config,
-    db
-}) => {
+export default ({ config, db }) => {
     let api = Router();
 
     // /account/register

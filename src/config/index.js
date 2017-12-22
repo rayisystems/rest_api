@@ -1,4 +1,4 @@
 export default {
-    "port": 3000,
+    "port": Process.env.PORT || 3000,
     "bodyLimit": "100kb"
 }

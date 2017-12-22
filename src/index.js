@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import passport from 'passport';
+import cors from 'cors'
 
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -31,6 +32,9 @@ passport.use(
 
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
+
+// CORS
+app.use(cors());
 
 // API routes
 app.use('/', routes);

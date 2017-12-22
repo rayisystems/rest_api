@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/config/index.js"],"names":["Process","env","PORT"],"mappings":";;;;;kBAAe;AACX,YAAQA,QAAQC,GAAR,CAAYC,IAAZ,IAAoB,IADjB;AAEX,iBAAa;AAFF,C","file":"index.js","sourcesContent":["export default {\r\n    \"port\": Process.env.PORT || 3000,\r\n    \"bodyLimit\": \"100kb\"\r\n}"]}
